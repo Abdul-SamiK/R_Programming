@@ -1,7 +1,7 @@
 ---
 title: "Introduction to R Programming"
-author: "Sana Rasheed"
-date: "May 14, 2020"
+author: "Abdul Sami Khan"
+date: "September 5, 2021"
 output: html_document
 ---
 
@@ -24,26 +24,32 @@ output: html_document
 
 ```{r }
 #### Start solution ####
-```
-
-
-```{r }
+name_vector <- c("A","B","D","U","L","S","A","M","I")
 
 ```
 
 
 ```{r }
+Con_variable <- paste(name_vector, collapse = "")
+Con_variable
+```
+
+
+```{r }
+Seq_variable <- seq(100:120)
 
 ```
 
 
 ```{r }
-
+mtrix <-  matrix(seq(2,18,by=2),3,3)
 ```
 
 
 ```{r }
-
+row.names(mtrix) <-c('r1','r2','r3')
+colnames(mtrix) <- c('c1','c2','c3')
+mtrix
 ```
 
 
@@ -60,16 +66,19 @@ output: html_document
 
 ```{r }
 #### Start solution ####
+emp_status <- factor(c("Employed","Self-Employed","Unemployed","Employed",
+                       "Self-Employed","Unemployed","Employed","Self-Employed",
+                       "Unemployed","Unemployed"))
 ```
 
 
 ```{r }
-
+table(emp_status)
 ```
 
 
 ```{r }
-
+unclass(emp_status)
 ```
 
 
@@ -101,16 +110,23 @@ output: html_document
 
 
 ```{r }
+bank_customer <- data.frame(CustomerID = 1:5, hasAccount=1:5, totalBalance=1:5)
+row.names(bank_customer) <- c(1:5)
+
+```
+
+
+```{r }
+bank_customer$CustomerID <- c("Alicia", "Nancy", "Fernando", "Lious","diane" )
+bank_customer$hasAccount <- c("NA", "yes", "yes", "yes", "NA")
+bank_customer$totalBalance <- c("NA","USD 10,000", "USD 0", "USD 2,000", "NA" )
 
 ```
 
 
 ```{r }
 
-```
-
-
-```{r }
+print(list(nrow(bank_customer), ncol(bank_customer),names(bank_customer)))
 
 ```
 
