@@ -159,16 +159,61 @@ print(list(nrow(bank_customer), ncol(bank_customer),names(bank_customer)))
 
 
 ```{r }
+vr <- seq(1:100)
+
+for (i in vr) {
+    c = 0
+    if(i == 1){next()}
+    
+    for( j in 2:i){
+       
+         if ( i %% j == 0){
+            c=c+1 
+        }
+    }
+    
+    if( c == 1){
+        print(i)
+    }
+}
+
+```
+
+
+```{r }
+var = 1
+    while(var < length(vr)){
+            var = var+1
+            print(var)
+        }
 
 ```
 
 
 ```{r }
 
-```
+cont = 0
 
+for (i in vr) {
+    c = 0
+    if(i == 1){next()}
+    
+    for( j in 2:i){
+         
+         if ( i %% j == 0){
+            c=c+1
+        }
+    }
+    
+     if( c == 1){
+        print(i)
+        cont = cont+1
+     }
+    if(cont == 10) break()
+        
+}
+    
 
-```{r }
 
 ```
 
@@ -198,6 +243,15 @@ print(list(nrow(bank_customer), ncol(bank_customer),names(bank_customer)))
 
 
 ```{r }
+mat_1 <- matrix(1:9, 3,3)
+
+for (r in seq_len(nrow(mat_1))) {
+    for (c in seq_len(ncol(mat_1))) {
+        print(paste("Rows ", r , " Columns ", c , mat_1[r,c]))
+  
+    }
+    
+}
 
 ```
 
